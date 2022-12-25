@@ -6,8 +6,15 @@ export default function Header({
 }) {
     return (
         <>
-            <h1 title="Header" className="header">{title}</h1>
-            {/* <h3 data-testid="header-2" className="header">Hello</h3> */}
+            {/* Unit Test */}
+            <h1 className="header" data-testid="header-2">{title}</h1>
+            <h6 className='header'>Aditi</h6>
+       
+            {/* Semantic Test */}
+            <h6 title="aditiTitle" className='header'>Aditi Solanki</h6>
+            
+            {/* TestId */}
+            <h6 className="header" data-testid="header-1">Test</h6> 
         </>
     )
 }
