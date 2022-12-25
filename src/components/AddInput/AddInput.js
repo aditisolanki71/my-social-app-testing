@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 } from "uuid";
- 
+import "./AddInput.css"
+
 const AddInput = ({ setTodos, todos }) => {
     const [ todo, setTodo ] = useState("")
 
@@ -12,13 +13,17 @@ const AddInput = ({ setTodos, todos }) => {
     }
 
     return (
-        <div>
+        <div className="input-container">
             <input 
+                className="input"  
                 value={todo}
                 placeholder="Add task"
                 onChange={e => setTodo(e.target.value)}
             />
-            <button onClick={addTodo}>
+             <button 
+                className="add-btn"
+                onClick={addTodo}
+                >
                 Add
             </button>
         </div>
