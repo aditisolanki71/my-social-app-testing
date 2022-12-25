@@ -1,13 +1,18 @@
+import "./TodoList.css"
 const TodoList = ({todos,setTodos}) => {
     return (
-        <div>
-            {
-                todos.map((todo,index) => (
-                    <div>
-                        {todo.task}
-                    </div>
-                ))
-            }
+        <div className="todolist-container">
+            <div className="todos-container">
+                <div>
+                    {
+                        todos.map((todo,index) => (
+                            <div>
+                                {todo.task}
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     )
 }
