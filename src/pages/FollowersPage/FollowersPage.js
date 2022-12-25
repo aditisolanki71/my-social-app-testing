@@ -1,8 +1,13 @@
+import { Container } from "react-bootstrap";
 import Followers from "../../components/Followers/Followers";
 
 const FollowersPage = () => {
     return (
-        <Followers />
+        <div>
+            <Container>
+                <Followers />
+            </Container>
+        </div>
     )
 }
 export default FollowersPage;
