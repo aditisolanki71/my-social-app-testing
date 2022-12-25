@@ -8,32 +8,16 @@ test("should render same text passed into title props",() => {
     expect(headingElement).toBeInTheDocument();
 });
 
-it("should render same text passed into title props",async () => {
-    render(<Header title="My Header"/>)
-    const headingElement = screen.getByRole("heading", {name: "My Header"});
-    expect(headingElement).toBeInTheDocument();
-    //error 
-    // const headingElement1 = screen.getByRole("paragraph");
-    // expect(headingElement1).toBeInTheDocument();
-});
-
-
-it("should render same text passed into title props",async () => {
-    render(<Header title="My Header"/>)
-    const headingElement = screen.getByRole("heading", {name: "Aditi"});
-    expect(headingElement).toBeInTheDocument();
-});
-
 //Semantic Test
 it("should render same text passed into title props",async () => {
-    render(<Header title="My Header"/>)
-    const headingElement = screen.getByTitle("aditiTitle");
+    render(<Header title="Semantic Test"/>)
+    const headingElement = screen.getByTitle("headerTitle",{name: "Semantic Test"});
     expect(headingElement).toBeInTheDocument();
 });
 
 // test id
 it("should render same text passed into title props",async () => {
-    render(<Header title="Test"/>)
-    const headingElement = screen.getByTestId("header-1");
+    render(<Header title="Test Id"/>)
+    const headingElement = screen.getByTestId("headerTestId", {name: "Test Id"});
     expect(headingElement).toBeInTheDocument();
 });
