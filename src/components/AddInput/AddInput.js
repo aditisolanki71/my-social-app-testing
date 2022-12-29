@@ -17,7 +17,7 @@ const AddInput = ({ setTodos, todos }) => {
             <input 
                 className="input"  
                 value={todo}
-                placeholder="Add task"
+                placeholder="Add a new task here..."
                 onChange={e => setTodo(e.target.value)}
             />
              <button 
